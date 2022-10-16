@@ -119,8 +119,9 @@ table {
 
 /* Polecenie h */
 
-#pol_h {
+.pol {
     width: 800px;
+    min-height: 500px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -144,4 +145,60 @@ table {
     float: right;
     width: 300px;
     margin-left: 10px;
+}
+
+/* Polecenie i */
+
+#i_img1 {
+    content: url("img/geralt.jpg");
+    width: 300px;
+    margin: 10px;
+}
+#i_img2 {
+    content: url("img/lambert.jpg");
+    width: 300px;
+    margin: 10px;
+    position: relative;
+    left: 400px;
+}
+#i_img3 {
+    content: url("img/eskel.jpg");
+    width: 300px;
+    margin: 10px;
+    position: absolute;
+    left: 45vw;
+}
+
+/* Polecenie j */
+
+ul {
+    width: 340px;
+    margin: 10px;
+    float: left;
+
+    font-size: 25px;
+    font-weight: bold;
+
+    background-position: center;
+    background-repeat: repeat;
+    background-size: contain;
+}
+
+li {
+    margin: 10px;
+}
+
+#eu_list {
+    color: white;
+    background-image: url(img/eu_flag.jpg);
+
+    position: absolute;
+    right: 4vw;
+}
+#asia_list {
+    color: rgb(0, 0, 0);
+    background-image: url(img/china_flag.jpg);
+
+    position: absolute;
+    left: 4vw;
 }
