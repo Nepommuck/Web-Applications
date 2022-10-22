@@ -1,0 +1,72 @@
+:root {
+    --top-hei: 15vh;
+    --button-hei: 5vh;
+    --column-hei: 60vh;
+    --button-hei: 5vh;
+    --button-hei: 7vh;
+    --footer-hei: var(--button-hei);
+
+    --vert-padding: 5vh;
+    --hor-padding: 5vw;
+}
+
+#container {
+    /* padding: 2vh; */
+    padding-left: var(--hor-padding);
+    padding-right: var(--hor-padding);
+    padding-top: var(--vert-padding);
+    padding-bottom: var(--vert-padding);
+}
+
+#grid-container {
+    background-color: rgb(0, 255, 38);
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+#top {
+    background-color: turquoise;
+    grid-column-start: 1;
+    grid-column-end: 5;
+
+    height: var(--top-hei);
+
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+#logo {
+    background-color: lime;
+    margin-left: 10vw;
+    margin-top: 5vh;
+}
+
+#title {
+    background-color: teal;
+
+    grid-column-start: 2;
+    grid-column-end: 5;
+}
+
+.button {
+    background-color: brown;
+    height: var(--button-hei);
+}
+
+#column {
+    background-color: crimson;
+    height: var(--column-hei);
+}
+
+#space {
+    background-color: salmon;
+    grid-column-start: 2;
+    grid-column-end: 5;
+}
+
+footer {
+    background-color:forestgreen;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    height: var(--footer-hei);
+}
