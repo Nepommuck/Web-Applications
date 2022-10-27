@@ -1,0 +1,19 @@
+body {
+    background-color: rgb(92, 92, 92);
+}
+
+#container {
+    /* background-color: aliceblue; */
+    margin: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* input#accountnr {
+    width: 140%;
+} */
+
+input:invalid {
+    border: 2px solid red;
+}

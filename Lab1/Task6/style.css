@@ -1,0 +1,125 @@
+:root {
+    --height: max(
+        min(1.8vh, 1vw),
+        12px
+    );
+}
+
+body {
+	font: 62.5% Verdana, Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 20px;
+}
+
+:link, :visited{
+    color: black;
+    text-decoration: none;
+}
+
+li:hover {
+    font-weight: bold;
+    background-color: #fff9f0;
+    cursor: pointer;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    font-size: var(--height);
+}
+
+ul.vertical {
+    flex-direction: column;
+}
+
+li {
+    display: block;
+
+    background-color: #f5e4c6;
+    border: 1px dashed gray;
+
+    text-transform: uppercase;
+
+    width: calc(
+        12 * var(--height)
+    );   
+
+    padding: calc(
+        0.3 * var(--height)
+    ) 0;
+    padding-left: calc(
+        2 * var(--height)
+    );
+
+    background-repeat: no-repeat;
+    background-size: calc(
+        1.8 * var(--height)
+    );
+}
+
+ul>:nth-child(1) {
+    background-image: url("images/home.png");
+}
+
+ul>:nth-child(2) {
+    background-color: #fff9f0;
+    background-image: url("images/bg_here.png");
+    
+}
+
+ul>:nth-child(3), ul>:nth-child(4), ul>:nth-child(5), ul>:nth-child(6) {
+    background-image: url("images/link.png");
+}
+
+ul>:nth-child(3):hover, ul>:nth-child(4):hover, ul>:nth-child(5):hover, ul>:nth-child(6):hover {
+    background-image: url("images/go.png");
+}
+
+img {    
+    height: calc(
+        1.8 * var(--height)
+    );
+}
+
+ul.vertical>li:nth-child(4) {
+    background-position: right;
+    background-image: url("images/bg_here.png");
+}
+
+.big_flex {
+    font-size: calc(
+        2 * var(--height)
+    );
+    text-align: center;
+    display: flex;
+
+    border: 1px solid red;
+}
+
+.half_flex {
+    width: 100%;
+    display: flex;
+}
+
+.half_flex:nth-child(1) {
+    justify-content: space-between;
+}
+
+.half_flex:nth-child(2) {
+    justify-content: end;
+}
+
+.block {
+    padding: calc(
+        0.5 * var(--height)
+    ) 
+    var(--height);
+    background-color: lightblue;
+    border: 1px solid black;
+}
+
+.block:hover {
+    cursor: pointer;
+}

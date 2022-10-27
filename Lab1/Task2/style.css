@@ -10,6 +10,10 @@
     --hor-padding: 5vw;
 }
 
+body {
+    overflow: hidden;
+}
+
 #container {
     /* padding: 2vh; */
     padding-left: var(--hor-padding);
@@ -26,19 +30,21 @@
 
 #top {
     background-color: turquoise;
-    grid-column-start: 1;
-    grid-column-end: 5;
+    /* grid-column-start: 1;
+    grid-column-end: 5; */
 
     height: var(--top-hei);
 
-    display: grid;
-    grid-template-columns: auto auto auto auto;
+    /* display: grid;
+    grid-template-columns: auto auto auto auto; */
 }
 
 #logo {
     background-color: lime;
-    margin-left: 10vw;
-    margin-top: 5vh;
+
+    margin-top: 3vh;
+    height: 8vh;
+    margin-left: 2vw;
 }
 
 #title {

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 8</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <form action="results.html" method="GET">
+            
+            <label for="accountnr">Numer konta:</label><br>
+            <input type="text" id="accountnr" name="accountnr" size="26"
+            placeholder="82 1020 5226 0000 6102 0417 7895" required>
+            <br><br>
+
+            <label for="fname">Imię:</label><br>
+            <input 
+                type="text" id="fname" name="fname" placeholder="Jan-Janusz" 
+                pattern="[A-Za-z\-]{2,20}" title="Name must be between 6 and 20 characters and contain only letters and '-' sign"
+            ><br><br>
+
+            <label for="lname">Nazwisko:</label><br>
+            <input 
+                type="text" id="lname" name="lname" placeholder="Nowak" 
+                pattern="[A-Za-z\-\ ]{2,20}" 
+                title="Last name must be between 6 and 20 characters and contain only letters, '-' sign or space"
+            ><br><br>
+
+
+            <p>Płeć:</p>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">Kobieta</label><br>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Mężczyzna</label><br>
+            <input type="radio" id="other_gender" name="gender" value="other_gender">
+            <label for="other_gender">Inna/wolę nie odpowiadać</label><br>
+            <br><br>
+
+
+            <label for="email">adres email:</label><br>
+            <input type="email" id="email" name="email" placeholder="jjnowak@bedzie.ci.dane">
+            <br><br>
+
+            <label for="street">Ulica:</label><br>
+            <input 
+                type="text" id="street" name="street" 
+                placeholder="Jabłonowa"
+                pattern="[A-Z][a-zA-Z -]{1,19}"
+                title="Street name must begin with caplital letter and conatin only letters, spaces and '-' character"
+            >
+            <br><br>
+
+            <label for="number1">Number domu:</label>
+            <input type="number" id="number1" name="number1" min="1" max="1000" size="4">
+            <br>
+
+            <label for="number2">Number mieszkania:</label>
+            <input type="number" id="number2" name="number2" min="1" max="1000" size="4">
+            <br><br>
+
+
+            <label for="webpage">Strona domowa:</label><br>
+            <input 
+                type="text" id="webpage" name="webpage" size="40"
+                placeholder="https://www.szymonbednorz.com/"
+                pattern="https?://www\..+\..+"
+                title="Must begin with https://www. (or http) and "
+            ><br><br>
+
+            <label for="age">wiek:</label><br>
+            <input type="number" id="age" name="age" min="1" max="125">
+            <br><br>
+
+            <label for="pin">pin:</label><br>
+            <input type="number" id="pin" name="pin" size="4">
+            <br><br>
+
+            <label for="birthdate">Data urodzenia:</label><br>
+            <input type="date" id="birthdate" name="birthdate" min="1904-02-11" max="2022-01-01">
+            <br><br>
+
+
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>        
+    </div>  
+</body>
+</html>
