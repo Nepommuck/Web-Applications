@@ -1,0 +1,11 @@
+/* #self-camera {
+    background-image: url(img/user-camera.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+} */
+
+#self-camera {
+    width: 200px;
+    height: 700px;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="box">
+        <div class="wrapper">
+            <div id="left">
+                <h1>Nagłówek tesktowy</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt quos id recusandae repellendus velit quo in voluptatum maiores error reprehenderit. Impedit beatae expedita ipsam modi omnis quas sapiente qui incidunt voluptas facilis explicabo nobis aperiam totam optio obcaecati, molestias sed repudiandae id debitis? Modi odio soluta commodi neque rerum optio?</p>
+                <button id="info">
+                    Więcej info
+                </button>
+            </div>
+
+            <div id="form">
+                <header>Formularz Tekstowy</header><br><br>
+
+                <label for="name">Name:</label><br>
+                <input 
+                    type="text" id="name" name="name" placeholder="John" 
+                    pattern="[A-Za-z\-]{2,20}" title="Name must be between 3 and 20 characters and contain only letters and '-' sign"
+                ><br>
+    
+                <label for="company-name">Company name:</label><br>
+                <input 
+                    type="text" id="company-name" name="company-name" placeholder="Modern-Solutions" 
+                    pattern="[A-Za-z\-\ ]{2,20}" 
+                    title="Last name must be between 6 and 20 characters and contain only letters, '-' sign or space"
+                ><br>
+    
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="john@modern-solutions.com">
+                <br><br>
+                <button type="submit">Send</button>
+            </div>
+        </div>        
+    </div>
+  
+</body>
+</html>

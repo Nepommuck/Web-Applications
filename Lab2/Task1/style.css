@@ -1,0 +1,139 @@
+:root {
+    --vert-margin: 3vh;
+    --hor-margin: 2vw;
+}
+
+body {
+    overflow: hidden;
+    margin: var(--vert-margin) var(--hor-margin);
+    background-color: #bfbfbf;
+}
+
+#grid-container {
+    background-color: rgb(0, 255, 38);
+    display: grid;
+    grid-template-columns: 3fr 7fr 2fr;
+    grid-template-rows: 17fr 11fr 54fr 11fr;
+
+    height: 94vh;
+}
+
+#top {
+    background-color: turquoise;
+    height: var(--top-hei);
+}
+
+#logo {
+    background-color: lime;
+
+    margin-top: 3vh;
+    height: 8vh;
+    margin-left: 2vw;
+}
+
+#title {
+    background-color: teal;
+
+    grid-column: 2 / 4;
+}
+
+#menu {
+    background-color: brown;
+
+    grid-column: 1 / 4;
+}
+
+#l_column {
+    background-color: crimson;
+}
+
+#r_column {
+    background-color: cornflowerblue;
+}
+
+#space {
+    background-color: salmon;
+}
+
+footer {
+    background-color:forestgreen;
+
+    grid-column: 1 / 4;
+}
+
+
+/* Square-like screen */
+@media (max-width: 150vh) {
+
+    #grid-container {
+        grid-template-columns: 3fr 7fr;
+        grid-template-rows: 17fr 11fr 54fr 17fr 11fr;
+    }
+    #title {
+        grid-column: 2 / 3;
+    }
+    #menu {
+        grid-column: 1 / 3;
+    }
+    #r_column {
+        grid-column: 1 / 3;
+    }
+    footer {
+        grid-column: 1 / 3;
+    }
+
+    #space {
+        background-color: pink;
+    }
+}
+
+/* Mobile screen */
+@media (max-width: 80vh) {
+
+    #grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 17fr 11fr 17fr 54fr 17fr 11fr;
+    }
+    #top {
+        display: none;
+    }
+
+    #title {
+        grid-column: 1 / 2;
+    }
+    #menu {
+        grid-column: 1 / 2;
+    }
+    #r_column {
+        grid-column: 1 / 2;
+    }
+    footer {
+        grid-column: 1 / 2;
+    }
+
+    #space {
+        background-color: rgb(233, 0, 194);
+    }
+}
+
+/* Very horizonal screen */
+@media (min-width: 250vh) {
+
+    body {
+        overflow: auto;
+    }
+
+    #grid-container {
+        height: 460px;
+    }
+
+    #logo {
+        margin-top: 20px;
+        height: 40px;
+        margin-left: 20px;
+    }
+
+    #space {
+        background-color: black;
+    }
+}

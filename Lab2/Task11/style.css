@@ -1,0 +1,134 @@
+body {
+    background-color: #edea51;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul#main {
+    margin: 100px;
+
+    display: block;
+    background-color: rgb(0, 46, 71);;
+    overflow: hidden;
+    width: 300px;
+    border-radius: 10px;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; 
+}
+
+.content {
+    display: none;
+}
+
+ul.content li {
+    padding: 10px 40px;
+    background-color: #1973a5;
+}
+ul.content li:hover {
+    background-color: rgb(5, 95, 145);
+    /* border-right: -10px solid black; */
+    height: 11px;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+}
+
+ul.content a{
+    position: relative;
+}
+
+ul.content li:hover::before {
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 270px;
+    left: 0;
+    top: 0;
+    /* opacity: 1; */
+    /* background-color: #d8d824; */
+
+    border-style: solid;
+    border-width: 20px 15px;
+    border-color: transparent #edea51;
+}
+
+label {
+    display: block;
+    /* padding: 20px 0; */
+    padding: 20px;
+    background-color: #fc68b2;
+    /* margin: 0; */
+    overflow: visible;
+}
+label:hover {
+    background-color: rgb(233, 84, 158);
+}
+
+label.hide {
+    background-color: #cf5b5c;
+}
+label.hide:hover {
+    background-color: rgb(227, 111, 112);
+}
+
+input.hide + label {
+    display: none;
+}
+
+input.show + label {
+    cursor: pointer;
+}
+
+input {
+    width: 0;
+    height: 0;
+    background-color: black;
+    display: none;
+}
+
+input.show:checked +label {
+    display: none;
+}
+
+input.show:checked ~input +label{
+    display: block;
+    cursor: pointer;
+}
+
+input.show:checked ~.content {
+    display: block;
+    position: relative;
+}
+input.hide ~.content::after {
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+    left: 250px;
+    top: 0;
+    opacity: 1;
+    /* background-color: #d8d824; */
+
+    border-style: solid;
+    border-width: 20px 15px;
+    border-bottom-width: 0;
+    border-color: #cf5b5c transparent ;
+}
+input.hide:hover ~.content::after {
+    border-color: rgb(227, 111, 112) transparent ;
+}
+

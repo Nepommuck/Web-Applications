@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.box {
+    background-color: #057aec;
+    margin-top: -50vh;
+    padding-top: 50vh;
+    /* padding: 5% 20px; Added a percentage value for top/bottom padding to keep the wrapper inside of the parent */
+    
+    height: 60vh;
+
+    -webkit-transform: skewY(-5deg);
+    -moz-transform: skewY(-5deg);
+    -ms-transform: skewY(-5deg);
+    -o-transform: skewY(-5deg);
+    transform: skewY(-5deg);
+}
+  
+.box > .wrapper {
+    -webkit-transform: skewY(5deg);
+    -moz-transform: skewY(5deg);
+    -ms-transform: skewY(5deg);
+    -o-transform: skewY(5deg);
+    transform: skewY(5deg);
+
+    /* display: grid;
+    grid-template-columns: 60% 40%; */
+
+    margin: 5vw 10vw;
+    display: flex;
+}
+
+div#left {
+    color: white;
+}
+
+div#form {
+    margin: 0 50px;
+
+    background-color: white;
+    padding: 3vw;
+    border-radius: 10px;
+    /* border: 1px solid gray; */
+    box-shadow: 10px 10px 50px 15px rgba(0, 0, 0, 0.137);
+
+    color: gray;
+}
+
+div#form>input {
+    width: 300px;
+    /* height: 30px; */
+    font-size: large;
+    margin-bottom: 15px;
+}
+
+header {
+    font-size: 1.8em;
+}
+
+button {
+    height: 35px;
+    width: 90px;
+
+    background-color: #057aec;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #03407e;
+    cursor: pointer;
+}
+
+button#info {
+    border: 1px solid white;
+    height: 45px;
+    width: 135px;
+}
+
+@media (max-width: 1000px) {
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div#form {
+        margin: 50px;
+    }
+}
