@@ -23,10 +23,10 @@ body {
     opacity: 0.5;
 }
 
-p {
+.image-transform-wrap p {
     position: relative;
     color: white;
-    left: 300px;
+    left: 220px;
     top: -80px;
 
     width: 150px;
@@ -47,11 +47,37 @@ p {
 }
 
 .offer {
-    width: 500px;
+    width: 400px;
     margin: 100px;
     
     /* background-color: green; */
     overflow: hidden;
 
     border: 1px solid black;
+}
+
+
+.reverse {
+    height: 500px;
+    background-color: orange;
+    display: none;
+}
+
+.offer:hover {
+    cursor: pointer;
+    overflow: visible;
+}
+
+.offer:hover>.image-transform-wrap {
+    display: none;
+}
+.offer:hover>.reverse {
+    display: block;
+
+    /* margin-top: -50px; */
+    /* margin-left: 50px; */
+    -webkit-transform: perspective(1000px) rotateY(40deg); 
+    transform: perspective(1000px) rotateY(40deg);
+    /* margin-left: 100px; */
+    /* -transform: perspective(200px) rotateX(40deg);     */
 }
