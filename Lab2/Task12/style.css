@@ -1,0 +1,282 @@
+:root {
+    --basic-color: black;
+    --red-color: rgb(255, 61, 61);
+    --blue-color: rgb(31, 31, 184);
+    --green-color: rgb(24, 114, 24);
+}
+
+body {
+    background-color: gray;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    user-select: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+button {    
+    border: none;
+    background-color: white;
+}
+
+main {
+    background-color: black;
+
+    display: flex;
+}
+
+.shoe {
+    height: 500px;
+    width: 500px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.shoe .background {
+    background-color: black;
+    position: relative;
+    top: 20px;
+    left: 100px;
+    height: 450px;
+    width: 400px;
+}
+
+.shoe .brand-name {
+    /* display: block; */
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    margin: 0;
+    padding: 0;
+
+    font-size: 150px;
+    font-weight: 700;
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+    color: white;
+    opacity: 0.2;
+}
+
+.shoe button.share {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    border: none;
+    background-color: white;
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+}
+.shoe button.share:hover {    
+    cursor: pointer;
+    width: 55px;
+    height: 55px;
+    font-size: 27px;
+}
+
+.shoe .logo {
+    position: absolute;
+    width: 100px;
+    top: 20px;
+    left: 20px;
+}
+.shoe .logo:hover {
+    cursor: pointer;
+}
+
+.shoe .product {
+    width: 500px;
+    position: absolute;
+    top: 100px;
+    left: -150px;
+    transform: rotate(-20deg);
+    filter: drop-shadow(0px 10px 15px #000000);
+}
+.shoe .product:hover {
+    cursor: grab;
+    transform: rotate(-20deg) scale(1.2);
+}
+
+.info {
+    width: 350px;
+    padding: 20px;
+    /* overflow-wrap: break-word; */
+    background-color: rgb(190, 190, 190);
+}
+
+.info .name {
+    display: flex;
+    align-items: center;
+}
+.info .name h1 {
+    user-select:text;
+}
+.info .name p {
+    color: white;
+    border-radius: 5px;
+    padding: 2px 7px;
+    margin-left: 10px;
+    font-size: 1.1em;
+}
+
+.info > p {    
+    user-select:text;
+}
+
+.info .color-picker {
+    display: flex;
+}
+input.color-button {
+    display: none;
+}
+
+input.color-button + label {
+    display: block;
+    width: 25px;
+    height: 25px;
+    border-radius: 20px;
+    margin: 0 10px;
+    background-color: var(--basic-color);
+}
+input.color-button:checked + label {
+    transform: scale(0.6);
+}
+input.color-button + label:hover {
+    cursor: pointer;
+}
+
+/* Colors for color buttons */
+.info .color-picker input#blue + label {
+    background-color: var(--blue-color);
+}
+.info .color-picker input#red + label {
+    background-color: var(--red-color);
+}
+.info .color-picker input#green + label {
+    background-color: var(--green-color);
+}
+
+input.size-button {
+    display: none;
+}
+
+label.size-label {
+    /* display: block; */
+    margin: 0 10px;
+    padding: 2px 10px;
+    border-radius: 8px;
+}
+label.size-label:hover {
+    cursor: pointer;
+}
+
+/* Selected size */
+input.size-button:checked + label.size-label {
+    background-color: black;
+    color: white;
+}
+
+.info .buy {
+    margin-top: 30px;
+
+    position: relative;
+}
+
+.info button.add-to-cart {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    color: white;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    background-color: var(--basic-color);
+}
+.info button.add-to-cart:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.info .buy p.price {
+    position: absolute;
+    margin: 0;
+    top: 0px;
+    right: 20px;
+
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Color switch */
+
+/* BLUE */
+main:has(.info):has(input#blue:checked) .shoe .background , 
+main:has(.info):has(input#blue:checked) .info .name p,
+main:has(.info):has(input#blue:checked) input.size-button:checked + label.size-label,
+main:has(.info):has(input#blue:checked) .info .add-to-cart {
+    background-color: var(--blue-color);
+}
+main:has(.info):has(input#blue:checked) .shoe .share {
+    color: var(--blue-color);
+}
+
+/* RED */
+main:has(.info):has(input#red:checked) .shoe img.product {
+    content: url("img/red.png");
+}
+main:has(.info):has(input#red:checked) .shoe .background , 
+main:has(.info):has(input#red:checked) .info .name p,
+main:has(.info):has(input#red:checked) input.size-button:checked + label.size-label,
+main:has(.info):has(input#red:checked) .info .add-to-cart {
+    background-color: var(--red-color);
+}
+main:has(.info):has(input#red:checked) .shoe .share {
+    color: var(--red-color);
+}
+
+/* GREEN */
+main:has(.info):has(input#green:checked) .shoe img.product  {
+    content: url("img/green.png");
+}
+main:has(.info):has(input#green:checked) .shoe .background , 
+main:has(.info):has(input#green:checked) .info .name p,
+main:has(.info):has(input#green:checked) input.size-button:checked + label.size-label,
+main:has(.info):has(input#green:checked) .info .add-to-cart {
+    background-color: var(--green-color);
+}
+main:has(.info):has(input#green:checked) .shoe .share {
+    color: var(--green-color);
+}
+
+
+/* Mobile version */
+@media(max-width: 500px) {
+    main {
+        flex-direction: column;
+    }
+}
+
+/* Warning for Mozilla Firefox users */
+#firefox {
+    display: none;
+}
+
+@supports ( -moz-appearance:none ){
+    body {
+        background-color: orange;
+    }
+    #firefox {
+        display: block;
+    }
+}

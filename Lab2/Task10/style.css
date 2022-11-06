@@ -1,6 +1,11 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    /* display: flex; */
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    user-select: none; 
 }
 
 .image-transform-wrap {
@@ -34,50 +39,74 @@ body {
     margin: 5px;
 
     background-color: green;
-    opacity: 0.85;
+    /* opacity: 0.85; */
 
     text-align: center;
     font-size: 20px;
     font-weight: normal;
     /* transform: skewY(5deg); */
 }
+#offer1 .image-transform-wrap h1 {
+    background-color: rgba(0, 128, 0, 0.8);
+}
+#offer2 .image-transform-wrap h1 {
+    background-color: rgba(255, 165, 0, 0.8);
+}
 
-.wrapper {
+#offer1 .wrapper {
     background-color: green;
-    /* margin-top: 100px; */
-    /* height: 300px; */
+}
+#offer2 .wrapper {
+    background-color: orange;
 }
 
 .offer {
     width: 400px;
-    margin: 100px;
+    margin: 100px 5vw;
+    max-height: 500px;
     
     /* background-color: green; */
     overflow: hidden;
 
-    border: 1px solid black;
+    /* border: 1px solid black; */
+
+    box-shadow: 5px 10px 18px #888888;
 }
 
 .offer:hover {
-    cursor: pointer;
+    /* cursor: pointer; */
     overflow: visible;
+    box-shadow: none;
 }
 
 .offer:hover>.image-transform-wrap {
     display: none;
 }
 
+.image-transform-wrap article{
+    position: relative;
+    top: -30px;
+    text-align: center;
+    color: rgb(126, 126, 126);
+}
+
 .reverse {
     height: 500px;
-    background-color: orange;
     color: white;
     display: none;
+}
+#offer1 .reverse {
+    background-color: green;
+}
+#offer2 .reverse {
+    background-color: orange;
 }
 
 .offer:hover>.reverse {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 
     /* margin-top: -50px; */
     /* margin-left: 50px; */
@@ -90,7 +119,39 @@ body {
 .reverse > button {
     background-color: white;
     color: gray;
+    font-size: 1.1em;
     border: 0;
     border-radius: 30px;
-    padding: 15px 45px;
+    padding: 20px 65px;
+    margin-bottom: 0px;
 }
+.reverse > button:hover {
+    cursor: pointer;
+}
+
+.reverse h2 {
+    font-weight: normal;
+    font-size: 1em;
+}
+
+.reverse h2 {
+    /* font-weight: normal; */
+    font-weight: 600;
+    font-size: 0.8em;
+}
+
+.reverse p {
+    /* font-weight: normal; */
+    font-weight: 100;
+    font-size: 5em;
+    font-family: 'open sans',arial,sans-serif;
+    margin: 0;
+    margin-bottom: 70px;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Open Sans'), local('OpenSans'), url('http://themes.googleusercontent.com/static/fonts/opensans/v5/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff') format('woff');
+  }
