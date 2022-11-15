@@ -7,10 +7,6 @@
     --frog-green: #54c77a;
 }
 
-i {
-    font-family: FontAwesome;
-}
-
 body {
     /* overflow: hidden; */
     margin: var(--vert-margin) var(--hor-margin);
@@ -48,9 +44,35 @@ sidebar {
     grid-row: 2 / 4;
 
     position: sticky;
-    top: 5vh;
+    top: 10px;
 
-    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    /* height: 120vh; */
+    height: 1000px;
+}
+
+sidebar img.avatar {
+    width: 200px;
+    /* margin: 50px; */
+    border-radius: 100px;
+}
+
+sidebar .info h1 {
+    margin: 0;
+}
+
+sidebar .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+sidebar .info i {
+    font-size: 2em;
 }
 
 main {

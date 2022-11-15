@@ -49,7 +49,7 @@ main {
 .item picture img {
     width: var(--desktop-item-width);
     height: 170px;
-    /* object-fit: cover; */
+    object-fit: cover;
 }
 
 .item h1 {

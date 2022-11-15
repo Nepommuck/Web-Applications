@@ -1,7 +1,9 @@
 :root {
-    --height: min(
-        600px,
-        105vw
+    --height:
+        min(
+            600px,
+            105vw, 
+            90vh
     );
     --basic-margin: 20px;
 }
