@@ -35,7 +35,7 @@ div#left {
     color: white;
 }
 
-div#form {
+form {
     margin: 0 50px;
 
     background-color: white;
@@ -47,14 +47,14 @@ div#form {
     color: gray;
 }
 
-div#form>input {
+form>input {
     width: 300px;
     /* height: 30px; */
     font-size: large;
     margin-bottom: 15px;
 }
 
-header {
+h1 {
     font-size: 1.8em;
 }
 
@@ -85,7 +85,7 @@ button#info {
         align-items: center;
     }
 
-    div#form {
+    form {
         margin: 50px;
     }
 }

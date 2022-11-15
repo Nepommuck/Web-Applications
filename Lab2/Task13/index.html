@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab2 - zadanie 1</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
+    rel="stylesheet"  type='text/css'>
+</head>
+<body>
+    <div id="grid-container">
+        
+        <header>hhh</header>
+        <nav>nnn</nav>
+        <sidebar>sss</sidebar>
+        <main>
+            
+            <div class="article-wrapper">
+                <article>
+                    <img src="img/articles/photo1.png" alt="Kayak">
+                    <h1>Przykładowy Nagłówek 1</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A quaerat hic eligendi minima necessitatibus maiores dolores praesentium, pariatur asperiores doloribus culpa quod, esse, qui odit similique provident animi ex quos. Ullam, debitis praesentium aliquid ratione incidunt non cumque illum accusantium nisi eaque, maiores nulla inventore rerum reprehenderit saepe, blanditiis laudantium.</p>
+                    <div style="clear:both"></div>
+                </article>
+            </div>
+            
+            <div class="article-wrapper">
+                <article>
+                    <img src="img/articles/photo2.png" alt="Gory">
+                    <h1>Przykładowy Nagłówek 2</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A quaerat hic eligendi minima necessitatibus maiores dolores praesentium, pariatur asperiores doloribus culpa quod, esse, qui odit similique provident animi ex quos. Ullam, debitis praesentium aliquid ratione incidunt non cumque illum accusantium nisi eaque, maiores nulla inventore rerum reprehenderit saepe, blanditiis laudantium.</p>
+                    <div style="clear:both"></div>
+                </article>
+            </div>
+
+            <div class="form-container">
+                <div class="form-wrapper">                    
+                    <form action="">
+                        <h1>Formularz Tekstowy</h1><br><br>
+
+                        <input 
+                            type="text" id="name" name="name" class="txt" placeholder="Full name" 
+                            pattern="[A-Za-z\-]{6,30}" required
+                            title="Last name must be between 6 and 30 characters and contain only letters, '-' sign or space"
+                        ><br>
+            
+                        <input 
+                        type="email" id="email" name="email" class="txt" placeholder="Email adress" required
+                        >
+                        <br><br>
+
+                        <div class="radio-holder">
+                            <input type="radio" name="group-size" value="big" id="big" class="radio-button">
+                            <label for="big">
+                                <div class="dot"></div>
+                                <p>Duże grupy turystyczne</p> 
+                            </label>
+            
+                            <input type="radio" name="group-size" value="small" id="small" class="radio-button">
+                            <label for="small">
+                                <div class="dot"></div>
+                                <p>Małe grupy turystyczne</p> 
+                            </label>
+                        </div>
+                        <button type="submit" class="submit">
+                            Następny krok
+                            <i class="fa-regular fa-arrow-right"></i>
+                        </button>                
+                    </form>
+                </div>
+            </div>
+
+        </main>
+        <ad>ad</ad>
+        <footer>ff</footer>
+    </div>
+</body>
+</html>

@@ -6,12 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <!-- <link 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
+    rel="stylesheet"  type='text/css'> -->
+    <script src="https://kit.fontawesome.com/a47768d1e7.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <main>
         <!-- <div class="camera" id="self-camera"></div> -->
-        <img id="self-camera" src="img/user-camera.jpg" alt="">
-        <div class="camera" id="participant-camera"></div>
+        <img class="participant-camera" src="img/participant-camera.jpg" alt="">
+        <img class="self-camera" src="img/user-camera-thin.jpg" alt="">
+
+        <div class="button-holder">
+            <button>
+                <i class="fa-solid fa-microphone"></i>
+            </button>
+            <button>
+                <i class="fa-solid fa-video"></i>
+            </button>
+            <button class="hang-up">
+                <i class="fa-solid fa-phone"></i>
+            </button>
+        </div>
+
+        <button class="options">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+        </button>
     </main>
+
+    <br><br><br>
+
+    <div id="content"></div>
 </body>
 </html>
