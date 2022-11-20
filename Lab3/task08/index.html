@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">    
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/a47768d1e7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password">
+
+            <button id="check">check</button>
+            <button id="show">show</button>
+
+            <div id="length" class="unchecked box">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <p>At least 8 characters</p>
+            
+            <div id="special-char" class="unchecked box"></div>
+            <p>At least one special character</p>
+
+            <div id="has-capital" class="unchecked box"></div>
+            <p>At least one capital letter</p>
+            
+            <div id="has-digit" class="unchecked box"></div>
+            <p>At least one digit</p>
+    </main>
+</body>
+</html>

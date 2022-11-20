@@ -1,0 +1,24 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box {
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.unchecked {
+    background-color: gray;
+}
+
+.checked {
+    background-color: green;
+}
+
