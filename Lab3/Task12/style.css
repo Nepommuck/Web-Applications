@@ -1,0 +1,79 @@
+html {
+}
+
+body{
+    height:100vh;
+    margin: 0;
+    position: relative;
+
+    background-image: url(images/board-bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    background-size: cover;
+
+    overflow: hidden;
+    user-select: none;
+    z-index: -1000;
+}
+
+
+.animation {
+    width: 200px; 
+    height: 312px;
+
+    animation:back 1.5s steps(10, end) infinite;
+    
+    background: url(images/walkingdead.png);
+
+    position: absolute;
+    left: 200vw;
+    top: -500px;
+}
+
+.animation:hover {
+    cursor: pointer;
+}
+
+#test:hover {
+    cursor:alias;
+}
+
+@keyframes back{
+    
+    0% {
+        /* background-position-x:820px; */
+        background-position-x: 2000px;
+    }
+}
+
+  /* @keyframes walk {
+    0%{
+        transform:translateX(-350%);
+    }
+    100%{
+      transform:translateX(350%);
+    } 
+  } */
+
+#score {
+    position: absolute;
+    margin: 0;
+    top: 30px;
+    right: 50px;
+    font-size: 100px;
+    color: white;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#healthbar {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+}
+
+.heart {
+    height: 100px;
+    margin: 5px;
+}

@@ -3,30 +3,29 @@ body {
     margin: 0;
 }
 
-/* The sidebar menu */
 .sidenav {
-    height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 300px; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
+    height: 100%;
+    width: 310px; 
+    position: fixed;
+    z-index: 1;
+    top: 0;
     left: 0;
-    background-color: white; /* Black */
-    overflow-x: hidden; /* Disable horizontal scroll */
+    background-color: white;
+    overflow-x: hidden;
     padding-top: 20px;
 }
   
-/* The navigation menu links */
 .sidenav a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 25px;
     color: #023197;
-    /* display: block; */
     display: flex;
-    /* justify-content: space-around; */
+    flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
+    overflow: hidden;
+    position: relative;
 }
 
 .sidenav>a>p {    
@@ -34,22 +33,30 @@ body {
     padding: 0;
 }
 
-/* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
     color: #f1f1f1;
 }
+.sidenav a:hover p::after {
+    color: #f1f1f1;
+    border-color: white;
+}
 
-/* Style page content */
 main {
-    margin-left: 300px; /* Same as the width of the sidebar */
+    margin-left: 300px;
     padding: 0px 10px;
-    /* background-color: red; */
 }
   
-  /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+
 @media screen and (max-width: 800px) {
     .sidenav>a>p {
-        display: none;
+        /* display: none; */
+        visibility: hidden;
+        height: 0;
+    }
+    .sidenav>a>p::after {
+        visibility: visible;
+        max-height: 30px;
+        top: 10px;
     }
     .sidenav {
         width: 100px;
@@ -83,16 +90,24 @@ main {
 .sidenav>a>i {
     color: #023197;
     margin: 20px;
-    /* width: 18px;
-    height: 18px; */
 }
 
 a:hover i{
     color: white;   
-    /* display: block; */
 }
 
 a:hover {
     background-color: rgb(5, 150, 0);
     border-radius: 30px;
+}
+
+.sidenav :nth-child(2) p::after {
+    position: absolute;
+    content: "18";
+    font-weight: bold;
+    color: green;
+    border: 1px solid green ;
+    border-radius: 50px;
+    padding: 0 5px;
+    right: 5px;
 }

@@ -35,11 +35,9 @@ button {
 
 main {
     display: flex;
-    /* flex-wrap: nowrap; */
 }
 
 .shoe {
-    /* height: 531px; */
     width: 500px;
     background-color: white;
     overflow: hidden;
@@ -57,7 +55,6 @@ main {
 }
 
 .shoe .brand-name {
-    /* display: block; */
     position: absolute;
     top: 50px;
     left: 20px;
@@ -66,7 +63,6 @@ main {
 
     font-size: 150px;
     font-weight: 700;
-    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
     color: white;
     opacity: 0.2;
 }
@@ -117,8 +113,6 @@ main {
     width: 350px;
     padding: 30px;
     padding-top: 10px;
-    /* overflow-wrap: break-word; */
-    /* background-color: rgb(224, 224, 224); */
     box-shadow: 0px 0px 20px #888888
 }
 

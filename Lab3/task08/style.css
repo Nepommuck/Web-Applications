@@ -4,6 +4,10 @@ body {
     align-items: center;
 }
 
+main {
+    user-select: none;
+}
+
 .box {
     width: 20px;
     height: 20px;
@@ -22,3 +26,18 @@ body {
     background-color: green;
 }
 
+button.show {
+    position: relative;
+    left: -30px;
+    border: none;
+    background-color: transparent;
+}
+button.show:hover {
+    cursor: pointer;
+}
+
+#compare {
+    color: red;
+    font-weight: bold;
+    visibility: hidden;
+}

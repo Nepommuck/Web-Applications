@@ -22,9 +22,6 @@ body {
     color: white;
 
     margin: 20px;
-    /* min-height: 21px; */
-    /* position: absolute;
-    bottom: 0; */
 }
 
 .dropdown {
@@ -54,20 +51,14 @@ a {
     cursor: pointer;
 }
 
-/* Change color of dropdown links on hover */
 .dropdown-content a:hover {
     background-color: #ddd;
 }
   
-  /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
     display: flex;
     flex-direction: column;
 }
-  
-/* Change the background color of the dropdown button when the dropdown content is shown */
-/* .dropdown:hover .dropbtn {background-color: #3e8e41;} */
-
 
 #nav-container {
     background-color: #61b5e2;
@@ -91,7 +82,6 @@ button {
     border: 2px solid white;
     border-radius: 20px;
     height: 40px;
-    /* min-width: 200px; */
     padding: 0 30px;
     margin: 10px;
 }

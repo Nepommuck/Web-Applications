@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/a47768d1e7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main>
+        <ul id="list">
+            <li id="contact0" class="contact box">
+                <div class="info">
+                    <p class="name">Jan-Krzysztof Duda</p>
+                    <p class="phone">500 100 500</p>
+                </div>
+                <button class="delete" onclick="hide(0)">
+                    <i class="fa-solid fa-trash-can"></i>
+                </button>
+            </li>
+
+            <li id="contact1" class="contact box">
+                <div class="info">
+                    <p class="name">Jan-Krzysztof Duda</p>
+                    <p class="phone">500 100 500</p>
+                </div>
+                <button class="delete" onclick="hide(1)">
+                    <i class="fa-solid fa-trash-can"></i>
+                </button>
+            </li>
+        </ul>
+
+        <div id="new-element" class="box">
+            <label for="name">Imię i nazwisko:</label>
+            <input type="text" name="name" id="name"><br>
+
+            <label for="phone-number">Numer telefonu:</label>
+            <input type="text" name="phone-number" id="phone-number">
+
+            <br>
+            <button id="add">Add</button><br><br>
+        </div>
+    </main>
+
+</body>
+</html>

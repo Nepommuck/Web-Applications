@@ -1,6 +1,4 @@
 :root {
-    /* --mult: 1.9; */
-
     --desktop-item-width: 300px;
 
     --square-item-width: min(350px, 45vw);
@@ -8,7 +6,6 @@
         (100vw - 2 * var(--square-item-width)) / 4
     );
 
-    /* --mobile-item-width: min(90vw, 450px); */
     --mobile-item-width: 90vw;
 
     --color-red: #f66969;
@@ -16,8 +13,6 @@
 }
 
 body {
-    /* background-color: gray; */
-    /* font-family: cursive; */
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
@@ -68,7 +63,6 @@ main {
 
 .item p.description {
     margin: 10px 20px;
-    /* background-color: green; */
     height: 150px;
     overflow: auto;
 }
@@ -135,7 +129,6 @@ main {
     }    
 
     .item {
-        /* background-color: green; */
         width: var(--mobile-item-width);
         height: calc(
             var(--mobile-item-width) * var(--mult)

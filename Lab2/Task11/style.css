@@ -41,7 +41,6 @@ ul.content li {
 }
 ul.content li:hover {
     background-color: rgb(5, 95, 145);
-    /* border-right: -10px solid black; */
     height: 11px;
     padding-bottom: 0;
     margin-bottom: 20px;
@@ -58,8 +57,6 @@ ul.content li:hover::before {
     width: 270px;
     left: 0;
     top: 0;
-    /* opacity: 1; */
-    /* background-color: #d8d824; */
 
     border-style: solid;
     border-width: 20px 15px;
@@ -68,10 +65,8 @@ ul.content li:hover::before {
 
 label {
     display: block;
-    /* padding: 20px 0; */
     padding: 20px;
     background-color: #fc68b2;
-    /* margin: 0; */
     overflow: visible;
 }
 label:hover {
@@ -121,7 +116,6 @@ input.hide ~.content::after {
     left: 250px;
     top: 0;
     opacity: 1;
-    /* background-color: #d8d824; */
 
     border-style: solid;
     border-width: 20px 15px;
@@ -131,4 +125,3 @@ input.hide ~.content::after {
 input.hide:hover ~.content::after {
     border-color: rgb(227, 111, 112) transparent ;
 }
-

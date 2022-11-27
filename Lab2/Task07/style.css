@@ -12,18 +12,11 @@ body {
     margin: 2vw;
 }
 
-/* i {
-    font-family: FontAwesome;
-    font-style: normal;
-} */
-
 main {
     position: relative;
     background-color: #002a42;
 
     height: var(--height);
-    /* width: 96vw; */
-    /* display: block; */
 }
 
 main .self-camera {
@@ -37,7 +30,6 @@ main .self-camera {
 
 main .participant-camera {
     position: absolute;
-    /* Center */
     left: 50%;
     transform: translate(-50%, 0);
     
@@ -47,7 +39,6 @@ main .participant-camera {
 main .button-holder {
     position: absolute;
     bottom: var(--basic-margin);
-    /* Center */
     left: 50%;
     transform: translate(-50%, 0);
 }

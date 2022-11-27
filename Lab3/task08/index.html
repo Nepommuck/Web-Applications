@@ -11,24 +11,40 @@
 </head>
 <body>
     <main>
+            <!-- <button id="check">check</button><br> -->
+
             <label for="password">Password:</label><br>
             <input type="password" id="password">
+            <button id="show" class="show">
+                <i class="fa-regular fa-eye"></i>
+            </button><br>
 
-            <button id="check">check</button>
-            <button id="show">show</button>
+            <label for="repeat-passw">Repeat password:</label><br>
+            <input type="password" id="repeat-passw">
+            <button id="show-repeat" class="show">
+                <i class="fa-regular fa-eye"></i>
+            </button>
+
+            <p id="compare">Passwords are not the same!</p>
 
             <div id="length" class="unchecked box">
                 <i class="fa-solid fa-xmark"></i>
             </div>
             <p>At least 8 characters</p>
             
-            <div id="special-char" class="unchecked box"></div>
+            <div id="special-char" class="unchecked box">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
             <p>At least one special character</p>
 
-            <div id="has-capital" class="unchecked box"></div>
+            <div id="has-capital" class="unchecked box">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
             <p>At least one capital letter</p>
             
-            <div id="has-digit" class="unchecked box"></div>
+            <div id="has-digit" class="unchecked box">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
             <p>At least one digit</p>
     </main>
 </body>

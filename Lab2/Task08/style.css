@@ -6,7 +6,6 @@ body {
     background-color: #057aec;
     margin-top: -50vh;
     padding-top: 50vh;
-    /* padding: 5% 20px; Added a percentage value for top/bottom padding to keep the wrapper inside of the parent */
     
     height: 60vh;
 
@@ -24,9 +23,6 @@ body {
     -o-transform: skewY(5deg);
     transform: skewY(5deg);
 
-    /* display: grid;
-    grid-template-columns: 60% 40%; */
-
     margin: 5vw 10vw;
     display: flex;
 }
@@ -41,7 +37,6 @@ form {
     background-color: white;
     padding: 3vw;
     border-radius: 10px;
-    /* border: 1px solid gray; */
     box-shadow: 10px 10px 50px 15px rgba(0, 0, 0, 0.137);
 
     color: gray;
@@ -49,7 +44,6 @@ form {
 
 form>input {
     width: 300px;
-    /* height: 30px; */
     font-size: large;
     margin-bottom: 15px;
 }
