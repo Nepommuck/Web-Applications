@@ -56,15 +56,27 @@ body{
     } 
   } */
 
-#score {
+body p {
     position: absolute;
     margin: 0;
-    top: 30px;
-    right: 50px;
-    font-size: 100px;
     color: white;
     font-weight: bold;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#score {
+    top: 30px;
+    right: 50px;
+    font-size: 100px;
+}
+
+#game-over {
+    top: 40vh;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    /* right: 50px; */
+    font-size: 100px;
 }
 
 #healthbar {

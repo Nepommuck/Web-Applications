@@ -1,8 +1,9 @@
 const speeds = [1, 2, 4, 8, 16]
-const speedMult = 1
+const speedMult = 2
 const body = document.getElementsByTagName('body')[0]
 let score = 0
 let health = 3
+const gameOverSign = document.getElementById("game-over")
 const basicZombieHeight = 312
 
 const hearts = []
@@ -21,6 +22,8 @@ for (let i=0; i<health; i++) {
 }
 
 body.addEventListener("click", ammoWasted)
+gameOverSign.style.display = "none"
+
 
 function getWindowHeight(){
     return window.innerHeight
@@ -73,7 +76,8 @@ function add() {
         bottomPosition: 0,
         element: document.createElement("div")
     }
-    newZombie.bottomPosition = randInt(200, -getZombieHeight(newZombie.scale) / 2)
+    // newZombie.bottomPosition = randInt(200, -getZombieHeight(newZombie.scale) / 2)
+    newZombie.bottomPosition = randInt(0.2 * getWindowHeight(), -getZombieHeight(newZombie.scale) / 2)
     // newZombie.bottomPosition = randInt(200, 0)
     newZombie.element.classList.add("animation")
 
@@ -84,7 +88,9 @@ function add() {
     newZombie.element.style.zIndex = (-newZombie.bottomPosition)
 
     newZombie.element.style.transform = "scale(" + newZombie.scale + ")"
-    newZombie.element.style.top = getWindowHeight() - newZombie.bottomPosition - getZombieHeight(newZombie.scale)/2 - basicZombieHeight/2 + "px"
+    newZombie.element.style.top = 
+    getWindowHeight() - newZombie.bottomPosition - getZombieHeight(newZombie.scale)/2 - basicZombieHeight/2 + "px"
+
     newZombie.element.style.display = "block"
     newZombie.element.addEventListener("click", kill)
 
@@ -126,9 +132,18 @@ function kill(event) {
     event.stopPropagation()
 }
 
+function toNDigits(x, n) {
+    let res = x + ''
+    let pref = ""
+    for (let i=0; i < n-res.length; i++)
+        pref += '0'
+    return pref + res
+}
+
 function changeScore(dif) {
     score = Math.max(score + dif, 0)
-    document.getElementById("score").innerText = score
+    // document.getElementById("score").innerText = score
+    document.getElementById("score").innerText = toNDigits(score, 5)
 }
 
 function checkIfAnyGotThrough() {
@@ -149,6 +164,7 @@ function decreaseHealth() {
     if (health <= 0) {
         clearInterval(moveInterval)
         clearInterval(addZombieInterval)
+        gameOverSign.style.display = "block"
     }
 }
 
