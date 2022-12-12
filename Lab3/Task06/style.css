@@ -4,15 +4,7 @@
     --disabled-button-color: gray;
 }
 
-body{    
-    /* height: 95vh;
-    display: flex;
-    flex-direction: column; */
-    /* align-items: center; */
-    /* justify-content: center; */
-    /* flex-wrap: ; */
-    /* background-color: rgb(165, 165, 165); */
-    /* margin: 0 50px; */
+body { 
     margin: 0;
 }
 
@@ -54,7 +46,6 @@ button:disabled:hover {
 
 
 ul#list {
-    /* background-color: red; */
     display: flex;
     flex-direction: column;
     list-style-type: none; /* Remove bullets */
@@ -88,4 +79,13 @@ ul#list {
     min-width: 0;
     height: 50px;
     width: 50px;
+}
+
+#new-element {
+    display: flex;
+    justify-content: space-evenly;
+}
+.input-holder {
+    display: flex;
+    flex-direction: column;
 }

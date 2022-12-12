@@ -1,7 +1,5 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* display: flex;
-    align-items: center; */
 }
 
 p {
@@ -14,7 +12,6 @@ p {
 }
 
 ol {
-    /* display: block; */
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
@@ -23,7 +20,6 @@ li {
     font-weight: bold;
 }
 li:hover {
-/* .task:hover { */
     cursor: pointer;
     background-color: green;
     border-radius: 10px;

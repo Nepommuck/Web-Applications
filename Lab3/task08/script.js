@@ -34,7 +34,6 @@ function hideRepeat() {
 }
 
 function showText(id, button, showFun, hideFun) {
-    // Hide the other field
     hidePassw()
     hideRepeat()
 
@@ -45,7 +44,6 @@ function showText(id, button, showFun, hideFun) {
     elem.outerHTML = '<input type="text" id="' + id + '">'
 
     elem = document.getElementById(id)
-    // passw.setAttribute(textValue, val)
     elem.value = val
 
     button.removeEventListener("click", showFun);
@@ -62,7 +60,6 @@ function hideText(id, button, showFun, hideFun) {
     elem.outerHTML = '<input type="password" id="' + id + '">'
 
     elem = document.getElementById(id)
-    // passw.setAttribute(textValue, val)
     elem.value = val
 
     button.removeEventListener("click", hideFun);

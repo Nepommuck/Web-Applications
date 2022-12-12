@@ -4,17 +4,14 @@ const list = document.getElementById("list")
 const addButton = document.getElementById("add")
 const newElement = document.getElementById("new-element")
 
-
 const nameInput = document.getElementById("name")
 const phoneInput = document.getElementById("phone-number")
 
-
-
 addButton.addEventListener("click", addToList)
 
-// document.getElementById("delete1").addEventListener("click", function() {hide(1)})
 
 function hide(id) {
+    console.log(id)
     const elem = document.getElementById("contact" + id)
     elem.style.display = "none"
 }
@@ -35,12 +32,12 @@ function addToList() {
 
     if( !isValidName(name) ) {
         ok = false
-        msg += "Ejjjjj\n"
+        msg += "Imię i nazwisko musi zaczynać się wielką literą, zawierać między 6, a 45 znaków i zamierać jedynie litery alfabetu, spację oraz znak '-'.\n"
     }
 
     if( !isValidPhoneNumber(phone) ) {
         ok = false
-        msg += "Numer gościu\n"
+        msg += "Numer telefonu musi składać się z 9 lub 12 cyfr i może być poprzedzony plusem.\n"
     }
 
     if(ok) {
@@ -52,12 +49,9 @@ function addToList() {
         + '"><i class="fa-solid fa-trash-can"></i></button></li>'
 
         list.innerHTML += newHTML
-
-
         id++
-        // resetInput()  
+        resetInput()  
     }
-
     else {
         alert(msg)
     }
@@ -153,12 +147,3 @@ function phoneDisplayFormat(num) {
         result = '+' + result
     return result
 }
-
-// console.log(
-//     elemArr
-// )
-// elemArr.push(1)
-// elemArr.push(2)
-// console.log(
-//     elemArr
-// )

@@ -18,9 +18,6 @@ const color_yellow = "rgb(255, 255, 0)"
 const opaque_black = "rgba(0, 0, 0, 0.7)"
 const opaque_red = "rgba(255, 0, 0, 0.3)"
 const opaque_yellow = "rgba(200, 255, 0, 0.5)"
-// white.addEventListener("click", white_click, true)
-// red.addEventListener("click", red_click, true)
-// yellow.addEventListener("click", yellow_click, true)
 
 prepare()
 

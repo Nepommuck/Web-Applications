@@ -44,10 +44,6 @@ function f(event) {
         ball.style.left
     )
 
-    // if (ball.style.left == "") {
-    //     ball.style.left = start_x
-    //     ball.style.top = start_y
-    // }
     let startPos = [
         toInt(ball.style.left),
         toInt(ball.style.top)
@@ -56,7 +52,6 @@ function f(event) {
     let finishPos = [event.clientX - offset, event.clientY - offset]
 
     let timer = setInterval(function() {
-        // how much time passed from the start?
         let timePassed = Date.now() - startTime
 
         if (timePassed > totalTime) {
@@ -65,16 +60,12 @@ function f(event) {
             return
         }
 
-        // draw the animation at the moment timePassed
         draw(timePassed);
-
     }, 10);
 
     function draw(timePassed) {
-
         ball.style.left = startPos[0] + timePassed / totalTime * (finishPos[0] - startPos[0]) + 'px'
         ball.style.top = startPos[1] + timePassed / totalTime * (finishPos[1] - startPos[1]) + 'px'
-
     }
 }
 

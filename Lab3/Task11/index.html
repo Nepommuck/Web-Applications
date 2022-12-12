@@ -6,9 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <div id="filter-container">
+        <div>
+            <p class="filter-label">Population:</p>
+            <input id="min-population" class="filter-input" type="number" placeholder="minimal (thousands)">
+            <input id="max-population" class="filter-input" type="number" placeholder="maximal (thousands)">
+        </div>
+        <div>
+            <p class="filter-label">Area:</p>
+            <input id="min-area" class="filter-input" type="number" placeholder="minimal (1000 km^2)">
+            <input id="max-area" class="filter-input" type="number" placeholder="maximal (1000 km^2)">
+        </div>
+        <div>
+            <p class="filter-label">Group by subregions:</p>
+            <input id="subregions-checkbox" type="checkbox">
+        </div>
+    </div>
+
+    <div class="pagination-holder">
+        <div class="pagination">
+
+        </div>
+    </div>
+
+    <div id="table-container">
+        <li class="header record">
+            <p></p><p></p>
+            <p class="sort-button" id="name-button">Name</p>
+            <p class="sort-button" id="capital-button">Capital</p>
+            <p class="sort-button" id="population-button">Population</p>
+            <p class="sort-button" id="area-button">Area</p>
+        </li>
+        <ul id="list">
     
+        </ul>
+    </div>
+    
+    <div class="pagination-holder">
+        <div class="pagination">
+
+        </div>
+    </div>
+
+    <footer></footer>
 </body>
 </html>

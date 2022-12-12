@@ -1,0 +1,21 @@
+{
+    "employees" : [
+        { 
+            "name": "Jan Kalwin", "position": "Directior", 
+            "motto": "Aliquam efficitur lorem ligula, ut fermentum orci convallis et. Suspendisse at iaculis leo. Mauris convallis lacus magna. Pellentesque lobortis quam. ", 
+            "avatar": "avatars/1.jpg" 
+        }, { 
+            "name": "Filip Piękny", "position": "Senior Executive", 
+            "motto": "xd", 
+            "avatar": "avatars/2.jpg"  
+        }, { 
+            "name": "Maria Antonina", "position": "Senior Developer", 
+            "motto": "Nunc pretium tempor diam, finibus faucibus lacus sagittis pellentesque. Morbi posuere sem turpis, luctus pretium dui ultricies egestas. Sed euismod. ", 
+            "avatar": "avatars/3.jpg"  
+        }, { 
+            "name": "Mikołaj Carski", "position": "Junior Developer", 
+            "motto": "Nunc sit amet est ipsum. Cras nec molestie odio. Donec elementum est at lacus mattis, et faucibus purus porta. Donec magna orci, facilisis id ipsum. ", 
+            "avatar": "avatars/4.jpg"  
+        }
+    ]
+}

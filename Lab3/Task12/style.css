@@ -1,4 +1,5 @@
-html {
+:root {
+    --aim-size: 300px;
 }
 
 body{
@@ -15,6 +16,11 @@ body{
     overflow: hidden;
     user-select: none;
     z-index: -1000;
+
+    /* Game Over */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 
@@ -31,13 +37,6 @@ body{
     top: -500px;
 }
 
-.animation:hover {
-    cursor: pointer;
-}
-
-#test:hover {
-    cursor:alias;
-}
 
 @keyframes back{
     
@@ -62,6 +61,11 @@ body p {
     color: white;
     font-weight: bold;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    user-select: none;
+}
+body:hover {
+    cursor: none;
 }
 
 #score {
@@ -71,12 +75,28 @@ body p {
 }
 
 #game-over {
-    top: 40vh;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
+    /* position: relative; */
+    /* margin-left: auto;
+    margin-right: auto; */
     /* right: 50px; */
     font-size: 100px;
+    background-color: black;
+    height: 250px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#game-over p {
+    position: relative;
+}
+#game-over p#play-again {
+    font-size: 70px;
+    color:rgb(158, 158, 158);
+}
+#game-over p#play-again:hover {
+    font-size: 70px;
+    color:white;
 }
 
 #healthbar {
@@ -88,4 +108,16 @@ body p {
 .heart {
     height: 100px;
     margin: 5px;
+}
+
+#aim {
+    display: block;
+    width: var(--aim-size);
+    height: var(--aim-size);
+    position: absolute;
+    left: calc(50vw - var(--aim-size)/2);
+    top: calc(50vh - var(--aim-size)/2);
+
+    z-index: 1000;
+    pointer-events: none
 }

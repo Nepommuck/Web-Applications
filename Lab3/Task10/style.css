@@ -1,7 +1,4 @@
 body {
-    /* display: flex;
-    justify-content: center; */
-
     user-select: none;
     margin: 0;
     overflow-y: hidden;
@@ -31,10 +28,7 @@ body {
     background-color: red;
     border-radius: 20px;
 
-    /* position: relative; */
     position: absolute;
-    /* left: 50vw;
-    top: 20vh; */
     left: 300px;
     top: 300px;
 }
