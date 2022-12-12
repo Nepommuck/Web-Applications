@@ -1,9 +1,11 @@
 const speeds = [1, 2, 4, 8, 16]
 const speedMult = 2
 const body = document.getElementsByTagName('body')[0]
+const gameOverSign = document.getElementById("game-over")
+const aim = document.getElementById("aim")
+const aimBias = 150
 let score = 0
 let health = 3
-const gameOverSign = document.getElementById("game-over")
 const basicZombieHeight = 312
 
 const hearts = []
@@ -23,6 +25,8 @@ for (let i=0; i<health; i++) {
 
 body.addEventListener("click", ammoWasted)
 gameOverSign.style.display = "none"
+changeScore(0)
+document.getElementById("play-again").addEventListener("click", function(){ location.reload() })
 
 
 function getWindowHeight(){
@@ -76,15 +80,10 @@ function add() {
         bottomPosition: 0,
         element: document.createElement("div")
     }
-    // newZombie.bottomPosition = randInt(200, -getZombieHeight(newZombie.scale) / 2)
     newZombie.bottomPosition = randInt(0.2 * getWindowHeight(), -getZombieHeight(newZombie.scale) / 2)
-    // newZombie.bottomPosition = randInt(200, 0)
     newZombie.element.classList.add("animation")
 
-    // newZombie.element.style.top =  newZombie.bottomPosition + "px"
-
     body.appendChild(newZombie.element)
-    // newZombie.element.style.zIndex = ""+ (-newZombie.bottomPosition)
     newZombie.element.style.zIndex = (-newZombie.bottomPosition)
 
     newZombie.element.style.transform = "scale(" + newZombie.scale + ")"
@@ -95,7 +94,6 @@ function add() {
     newZombie.element.addEventListener("click", kill)
 
     zombies.push(newZombie)
-    // let intervalID2 = window.setInterval(move, 20);
 
     console.log(
         zombies
@@ -161,16 +159,31 @@ function checkIfAnyGotThrough() {
 function decreaseHealth() {
     hearts[health-1].src = "images/empty_heart.png"
     health--
-    if (health <= 0) {
-        clearInterval(moveInterval)
-        clearInterval(addZombieInterval)
-        gameOverSign.style.display = "block"
-    }
+    if (health <= 0)
+        gameIsOver()
+}
+
+function gameIsOver() {
+    clearInterval(moveInterval)
+    clearInterval(addZombieInterval)
+    gameOverSign.style.display = "flex"
+    aim.style.display = "none"
+    body.style.cursor = "pointer"
 }
 
 function ammoWasted() {
     changeScore(-6)
 }
 
+function updateAimPosition(event) {
+    console.log(
+        event.pageX, event.pageY
+    )
+    aim.style.left = (event.pageX - aimBias) + "px"
+    aim.style.top = (event.pageY - aimBias) + "px"
+}
+
 let moveInterval = window.setInterval(move, 20);
 let addZombieInterval = window.setInterval(add, 1000);
+
+body.addEventListener("mousemove", updateAimPosition, false)
