@@ -74,7 +74,6 @@ function readData(json) {
     }
 
     calcSubregions()
-
     checkConditions()
     sortContent('population')
     show()
@@ -148,7 +147,7 @@ function showBySubregions() {
             for (const property of ['e', 'e', 'name', 'e', 'population', 'area']) {
                 let elem = document.createElement("p")
                 if (property != 'e')
-                    elem.innerText = (['population', 'area'].includes(property)) ? addSeparators(subregion[property]) : subregion[property]
+                    elem.innerText = (['population', 'area'].includes(property)) ? addSeparators(Math.floor(subregion[property])) : subregion[property]
                 subregionRecord.appendChild(elem)
             }
 

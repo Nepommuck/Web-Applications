@@ -3,6 +3,7 @@ const speedMult = 2
 const body = document.getElementsByTagName('body')[0]
 const gameOverSign = document.getElementById("game-over")
 const aim = document.getElementById("aim")
+const playAgainButton = document.getElementById("play-again")
 const aimBias = 150
 let score = 0
 let health = 3
@@ -13,20 +14,23 @@ let zombies = []
 
 let running = true
 
+init()
 
-for (let i=0; i<health; i++) {
-    let element = document.createElement("img")
-    element.src = "images/full_heart.png"
-    element.classList.add("heart")
 
-    document.getElementById("healthbar").appendChild(element)
-    hearts[i] = element
+function init() {
+    for (let i=0; i<health; i++) {
+        let element = document.createElement("img")
+        element.src = "images/full_heart.png"
+        element.classList.add("heart")
+    
+        document.getElementById("healthbar").appendChild(element)
+        hearts[i] = element
+    }
+    
+    body.addEventListener("click", ammoWasted)
+    gameOverSign.style.display = "none"
+    changeScore(0)
 }
-
-body.addEventListener("click", ammoWasted)
-gameOverSign.style.display = "none"
-changeScore(0)
-document.getElementById("play-again").addEventListener("click", function(){ location.reload() })
 
 
 function getWindowHeight(){
@@ -67,10 +71,6 @@ function getZombieHeight(scale) {
     return scale * basicZombieHeight;
 }
 
-// for (const zombie of zombies)
-//     zombie.style.left = "800px"
-
-
 // Create new one
 function add() {
     const newZombie = {
@@ -81,7 +81,8 @@ function add() {
         element: document.createElement("div")
     }
     newZombie.bottomPosition = randInt(0.2 * getWindowHeight(), -getZombieHeight(newZombie.scale) / 2)
-    newZombie.element.classList.add("animation")
+    newZombie.element.classList.add("animation")    
+    newZombie.element.style.animation = "back " + 2.2 * newZombie.scale / newZombie.speed + "s steps(10, end) infinite"
 
     body.appendChild(newZombie.element)
     newZombie.element.style.zIndex = (-newZombie.bottomPosition)
@@ -94,12 +95,7 @@ function add() {
     newZombie.element.addEventListener("click", kill)
 
     zombies.push(newZombie)
-
-    console.log(
-        zombies
-    )
 }
-
 
 function move() {
     for (const zombie of zombies) {        
@@ -107,16 +103,14 @@ function move() {
         zombie.element.style.left = zombie.leftPosition + "px"
     }
     checkIfAnyGotThrough()
-
     removeKilled()
-
 }
 
 function removeKilled() {
-    for (const zombie of zombies) {
+    for (const zombie of zombies)
         if (zombie.element.style.display == "none")
-        body.removeChild(zombie.element)
-    }
+            body.removeChild(zombie.element)
+
     zombies = zombies.filter(
         zombie => zombie.element.style.display != "none"
     )
@@ -147,9 +141,6 @@ function changeScore(dif) {
 function checkIfAnyGotThrough() {
     for (const zombie of zombies) {
         if (toNum(zombie.element.style.left) < -300 && zombie.element.style.display != "none") {
-            console.log(
-                "Wróg u bram"
-            )
             zombie.element.style.display = "none"
             decreaseHealth()
         }
@@ -166,9 +157,18 @@ function decreaseHealth() {
 function gameIsOver() {
     clearInterval(moveInterval)
     clearInterval(addZombieInterval)
+
+    body.removeEventListener("click", ammoWasted)    
+    for (const zombie of zombies) {
+        zombie.element.removeEventListener("click", kill)
+        zombie.element.style.animation = "back " + randRange(3.5, 4.5) + "s steps(10, end) infinite"
+    }
     gameOverSign.style.display = "flex"
     aim.style.display = "none"
-    body.style.cursor = "pointer"
+
+    body.style.cursor = "default"
+    playAgainButton.addEventListener("click", function(){ location.reload() })
+    playAgainButton.style.cursor = "pointer"
 }
 
 function ammoWasted() {
@@ -176,9 +176,6 @@ function ammoWasted() {
 }
 
 function updateAimPosition(event) {
-    console.log(
-        event.pageX, event.pageY
-    )
     aim.style.left = (event.pageX - aimBias) + "px"
     aim.style.top = (event.pageY - aimBias) + "px"
 }

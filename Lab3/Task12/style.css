@@ -28,7 +28,7 @@ body{
     width: 200px; 
     height: 312px;
 
-    animation:back 1.5s steps(10, end) infinite;
+    animation: back 1.5s steps(10, end) infinite;
     
     background: url(images/walkingdead.png);
 
@@ -37,23 +37,11 @@ body{
     top: -500px;
 }
 
-
-@keyframes back{
-    
+@keyframes back{    
     0% {
-        /* background-position-x:820px; */
         background-position-x: 2000px;
     }
 }
-
-  /* @keyframes walk {
-    0%{
-        transform:translateX(-350%);
-    }
-    100%{
-      transform:translateX(350%);
-    } 
-  } */
 
 body p {
     position: absolute;
@@ -75,10 +63,6 @@ body:hover {
 }
 
 #game-over {
-    /* position: relative; */
-    /* margin-left: auto;
-    margin-right: auto; */
-    /* right: 50px; */
     font-size: 100px;
     background-color: black;
     height: 250px;
@@ -87,6 +71,7 @@ body:hover {
     flex-direction: column;
     align-items: center;
 }
+
 #game-over p {
     position: relative;
 }
@@ -115,8 +100,8 @@ body:hover {
     width: var(--aim-size);
     height: var(--aim-size);
     position: absolute;
-    left: calc(50vw - var(--aim-size)/2);
-    top: calc(50vh - var(--aim-size)/2);
+    left: calc(50vw - var(--aim-size) / 2);
+    top: calc(50vh - var(--aim-size) / 2);
 
     z-index: 1000;
     pointer-events: none
