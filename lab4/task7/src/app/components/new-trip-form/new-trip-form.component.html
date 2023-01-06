@@ -1,0 +1,51 @@
+<div class="form">
+    <h2 id="registration">New Trip Form</h2>
+    <form (ngSubmit)="onSubmit()" #myForm="ngForm">  
+        <label for="trip-name">Trip Name</label>
+        <input type="text" id="trip-name" placeholder="Into the unknown..." name="trip-name" 
+        ngModel required pattern="[A-Za-z \-]{5,30}" #tripname="ngModel">
+
+        <div><small *ngIf="tripname.invalid && tripname.touched">
+            Name must be between 5-30 characters: only latin letters
+        </small></div>
+
+        <label for="country">Destination country</label>
+        <input type="text" id="country" placeholder="Poland" name="country" 
+        ngModel required pattern="[A-Za-z \-]{3,25}" #country="ngModel">
+
+        <div><small *ngIf="country.invalid && country.touched">
+            Country name must be between 3-25 characters: only latin letters
+        </small></div>
+
+        <div class="date-holder">
+            <label for="start-date">Start date</label>
+            <input type="date" id="start-date" name="start-date" ngModel required>
+    
+            <label for="end-date">End date</label>
+            <input type="date" id="end-date" name="end-date" ngModel required>
+        </div>
+    
+        <div class="date-holder">
+            <label for="price">Price $</label>
+            <input type="number" id="price" placeholder="1230" name="price" min="1" pattern="[0-9]{1,15}" ngModel required #price="ngModel">
+
+            <label for="tickets">Number of tickets</label>
+            <input type="number" id="tickets" placeholder="7" name="tickets" min="1" pattern="[0-9]{1,10}" ngModel required #tickets="ngModel">
+
+            <div><small *ngIf="price.invalid && price.touched">
+                Price must be a natural number
+            </small></div>
+            <div><small *ngIf="tickets.invalid && tickets.touched">
+                Tickets must be a natural number
+            </small></div>
+        </div>
+
+        <label>Description <i>(Optional)</i></label>
+        <textarea id="description" rows="4" maxlength="200" name="description" ngModel></textarea>
+        
+        <div class="button-holder">
+            <input type="submit" value="Submit" id="btn">
+            <input type="button" value="Cancel" class="cancel" (click)="onClose()">
+        </div>
+    </form>
+</div>

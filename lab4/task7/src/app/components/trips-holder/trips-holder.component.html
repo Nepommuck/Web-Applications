@@ -1,0 +1,6 @@
+<div class="container">
+    <app-trip *ngFor="let givenTrip of trips" 
+    [trip]=givenTrip [prices]=currentPrices 
+    (tripDeleted)="deleteTrip($event)"
+    (cartChanged)="updateCart($event)"></app-trip>
+</div>
