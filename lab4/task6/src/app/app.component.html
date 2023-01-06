@@ -1,0 +1,5 @@
+<main>
+    <app-content [title]=displayedTopic.title [content]=displayedTopic.content></app-content>
+
+    <app-topic-holder [topics]="topics" (topicChosen)="changeDisplayedTopic($event)"></app-topic-holder>
+</main>

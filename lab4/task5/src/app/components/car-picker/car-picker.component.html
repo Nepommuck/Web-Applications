@@ -1,0 +1,40 @@
+<p>Select brand:</p>
+<select name="brand-select" id="brand-select" #brandSelector (change)="onBrandSelected(brandSelector.value)">
+    <option value="none"></option>
+    <option *ngFor="let brand of brands" value={{brand.name}}>{{brand.name}}</option>
+</select>
+
+<br><br>
+
+<ng-container *ngIf="selectedBrandInd >= 0">
+    <p>Select model:</p>
+    <select *ngIf="selectedBrandInd >= 0" name="model-select" id="model-select" #modelSelector (change)="onModelSelected(modelSelector.value)">
+        <option value="none"></option>
+        <option *ngFor="let model of brands[selectedBrandInd].models" value={{model}}>{{model}}</option>
+    </select>
+</ng-container>
+
+<br><br>
+
+<ng-container *ngIf="selectedModelInd >= 0">
+    <p>Select color:</p>
+    <div class="color-picker">
+        <input type="radio" id="choice1" name="contact" value="red" #redSelector (change)="onColorSelected(redSelector.value)"/>
+        <label class="red" for="choice1"></label>
+
+        <input type="radio" id="choice2" name="contact" value="blue" #blueSelector (change)="onColorSelected(blueSelector.value)"/>
+        <label class="blue" for="choice2"></label>
+
+        <input type="radio" id="choice3" name="contact" value="green" #greenSelector (change)="onColorSelected(greenSelector.value)"/>
+        <label class="green" for="choice3"></label>
+
+        <input type="radio" id="choice4" name="contact" value="yellow" #yellowSelector (change)="onColorSelected(yellowSelector.value)"/>
+        <label class="yellow" for="choice4"></label>
+
+        <input type="radio" id="choice5" name="contact" value="silver" #silverSelector (change)="onColorSelected(silverSelector.value)"/>
+        <label class="silver" for="choice5"></label>
+
+    </div>
+</ng-container>
+
+<p *ngIf="selectedColor != ''" id="result">{{ getResultMessage() }}</p>

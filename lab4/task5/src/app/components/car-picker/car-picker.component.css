@@ -1,0 +1,45 @@
+::ng-deep :root {
+    --color-size: 20px;
+    --margin-size: 5px;
+    --border-size: 1px;
+}
+
+.color-picker > input {
+    display: none;
+}
+.color-picker > label {
+    display: block;    
+    height: var(--color-size);
+    width: var(--color-size);
+    border: calc(var(--margin-size) + var(--border-size)) solid white;
+}
+
+.color-picker > label.red {
+    background-color: red;
+}
+.color-picker > label.blue {
+    background-color: blue;
+}
+.color-picker > label.green {
+    background-color: green;
+}
+.color-picker > label.yellow {
+    background-color: yellow;
+}
+.color-picker > label.silver {
+    background-color: silver;
+}
+
+.color-picker > input:checked + label{    
+    height: calc(
+        var(--color-size) + 2*var(--margin-size)
+    );
+    width: calc(
+        var(--color-size) + 2*var(--margin-size)
+    );
+    border: var(--border-size) solid black;
+}
+
+.color-picker {
+    display: flex;
+}

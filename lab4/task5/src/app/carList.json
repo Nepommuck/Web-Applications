@@ -1,0 +1,89 @@
+{
+    "cars": [
+        {
+            "brand": "opel",
+            "model": "astra"
+        }, {
+            "brand": "opel",
+            "model": "corsa"
+        }, {
+            "brand": "opel",
+            "model": "zafira"
+        }, {
+            "brand": "opel",
+            "model": "mokka"
+        }, {
+            "brand": "opel",
+            "model": "crossland"
+        }, {
+            "brand": "opel",
+            "model": "grandland"
+        }, {
+            "brand": "fiat",
+            "model": "panda"
+        }, {
+            "brand": "fiat",
+            "model": "500"
+        }, {
+            "brand": "fiat",
+            "model": "tipo"
+        }, {
+            "brand": "citroen",
+            "model": "c3"
+        }, {
+            "brand": "citroen",
+            "model": "c4"
+        }, {
+            "brand": "citroen",
+            "model": "c5"
+        }, {
+            "brand": "citroen",
+            "model": "berlingo"
+        }, {
+            "brand": "bmw",
+            "model": "f40"
+        }, {
+            "brand": "bmw",
+            "model": "f44"
+        }, {
+            "brand": "bmw",
+            "model": "g20"
+        }, {
+            "brand": "bmw",
+            "model": "g30"
+        }, {
+            "brand": "bmw",
+            "model": "g15"
+        }, {
+            "brand": "bmw",
+            "model": "x1"
+        }, {
+            "brand": "bmw",
+            "model": "x2"
+        }, {
+            "brand": "bmw",
+            "model": "x3"
+        }, {
+            "brand": "bmw",
+            "model": "x4"
+        }, {
+            "brand": "bmw",
+            "model": "z4"
+        }, {
+            "brand": "ferrari",
+            "model": "296 GTB"
+        }, {
+            "brand": "ferrari",
+            "model": "f8 spider"
+        }, {
+            "brand": "ferrari",
+            "model": "SF90 spider"
+        }, {
+            "brand": "ferrari",
+            "model": "roma"
+        }, {
+            "brand": "ferrari",
+            "model": "Portofino M"
+        }
+    ]
+}
