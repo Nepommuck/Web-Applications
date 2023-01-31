@@ -1,0 +1,92 @@
+.review {
+    background-color: #e7e7e7;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+.review div {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+.review .nick {
+    font-weight: bold;
+    font-size: 1em;
+}
+.review .comment {
+    font-size: 1.1em;
+}
+
+
+input[type=text], [type=date], [type=number], textarea, select {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit], input.cancel {
+    width: 25%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type=submit]:disabled {
+    cursor: default;
+    background-color: #45a049;
+}
+  
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched{
+    border: red 1px solid;
+}
+small{
+    color: red;
+}
+input.ng-valid.ng-touched, textarea.ng-valid.ng-touched  {
+    background-color: rgb(240, 248, 255);
+}
+
+.upper {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+}
+
+label {
+    margin-right: 4px;
+}
+
+.right {
+    width: calc(100% - 130px);
+    display: flex;
+    justify-content: right;
+}
+input#title {
+    width: max(calc(100% - 100px), 200px);
+}
+
+textarea {
+    display: block;
+    width: calc(100% - 8px);
+    margin: 10px 0;
+    resize: none;
+}
+
+.info {
+    font-weight: bold;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+}

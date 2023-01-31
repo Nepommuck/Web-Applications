@@ -1,0 +1,46 @@
+<div class="top">
+    <p>Purchase history: </p>
+    <div class="filters">
+        <label for="archival-checkbox" class="archival"> ARCHIVAL </label>
+        <input id="archival-checkbox" type="checkbox" (change)="updateFilters(-1, $event)">
+
+        <label for="ongoing-checkbox" class="ongoing"> ONGOING </label>
+        <input id="ongoing-checkbox" type="checkbox" (change)="updateFilters(0, $event)" checked>
+
+        <label for="future-checkbox" class="future"> FUTURE </label>
+        <input id="future-checkbox" type="checkbox" (change)="updateFilters(1, $event)" checked>
+    </div>
+</div>
+
+<div *ngFor="let record of getPurchaseHistory()">
+    <div *ngIf="shouldShow(record.state)" class="trip-ticket">
+        <div class="left">
+            <h1 *ngIf="record.state == -1" class="archival"> ARCHIVAL </h1>
+            <h1 *ngIf="record.state == 0" class="ongoing"> ONGOING </h1>
+            <h1 *ngIf="record.state == 1" class="future"> FUTURE </h1>
+
+            <h1>{{ record.quantity }} ticket{{ (record.quantity > 1) ? "s" : "" }}</h1>
+            <!-- <h1>Bought at {{ toDateTime(record.purchaseDate) }}</h1> -->
+            <p>Bought at {{ record.purchaseDate }}</p>
+        </div>
+        <a [routerLink]="['/trip/', record.trip.id]" [queryParams]="{'id': record.trip.id}">
+            <img [src]="record.trip.imageSources[0]" [alt]="record.trip.country">
+        </a>
+        <div class="right">
+            <h1>{{ record.trip.name.toUpperCase() }}</h1>
+            <h2>{{ record.trip.country.toUpperCase() }}</h2>
+        
+            <p class="date">{{ record.trip.startDate }} - {{ record.trip.endDate }}</p>
+        </div>
+
+
+    <!-- <div class="list-holder">
+        <ul class="names">
+            <li *ngFor="let record of getPurchaseHistory()">{{ record.quantity }}x {{ record.trip.name }}</li>
+        </ul>
+        <ul class="prices">
+            <li *ngFor="let record of getPurchaseHistory()">{{"$ " + record.quantity * record.trip.price }}</li>
+        </ul>
+    </div> -->
+    </div>
+</div>

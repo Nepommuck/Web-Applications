@@ -1,0 +1,24 @@
+<header>
+    <a class="simple-link" routerLink="">HOME</a>
+    <a class="simple-link" routerLink="/trips">TRIPS</a>
+    <a class="simple-link" routerLink="/new-trip">ADD TRIP</a>
+    <a class="simple-link" routerLink="/purchase-history">HISTORY</a>
+    <a routerLink="/cart">
+        <div class="small-cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+        
+            <p class="items">Items in cart: {{countItemsInCart()}}</p>    
+            <p class="price">{{getTotalValueOfCart()}} $</p>
+        </div>
+    </a>
+
+    <a routerLink="/purchase-history">
+        <div class="avatar-holder">
+            <img class="avatar" src="assets/images/avatar-basic.jpg" alt="">
+            <p *ngIf="getDaysToNextTrip() > 0">Trip in {{ getDaysToNextTrip() }} day{{ (getDaysToNextTrip() > 1) ? "s" : "" }}</p>
+            <!-- <p>Trip in {{ getDaysToNextTrip() }} day{{ (getDaysToNextTrip() > 1) ? "s" : "" }}</p> -->
+        </div>
+    </a>
+</header>
+
+<router-outlet></router-outlet>

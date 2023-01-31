@@ -1,0 +1,52 @@
+:not(i) {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container {
+    /* width: 200px; */
+    padding: 15px 30px;
+    margin: 30px 50px;
+    background-color: rgb(230, 230, 230);
+    border-radius: 15px;
+    z-index: 500;
+    min-height: 300px;
+}
+
+.list-holder {
+    display: flex;
+}
+
+ul.prices {
+    font-weight: bold;
+    list-style-type: none;
+}
+
+li {
+    margin: 10px;
+    font-size: 1.4em;
+}
+li.total {
+    list-style-type: none;
+}
+
+p {
+    font-size: 1.6em;
+}
+
+button.buy {
+    background-color: green;
+    color: white;
+    border: 0 solid white;
+    font-size: 25px;
+    border-radius: 15px;
+    padding: 7px 20px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+button.buy:hover {
+    cursor: pointer;
+    border: 5px solid green;
+    padding: 2px 15px;
+    color: green;
+    background-color: white;
+}

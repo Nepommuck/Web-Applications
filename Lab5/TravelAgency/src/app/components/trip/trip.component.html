@@ -1,0 +1,28 @@
+<div class="container" [class.inactive]="ticketsLeft <= 0" 
+[class.last-ones]="ticketsLeft > 0 && ticketsLeft <= lastTicketsCutOffPoint"
+[class.cheapest]="trip.price == getMinPrice() && ticketsLeft > 0"
+[class.mostExpensive]="trip.price == getMaxPrice() && ticketsLeft > 0">
+
+    <a [routerLink]="['/trip/', trip.id]" [queryParams]="{'id': trip.id}">
+        <img [src]="trip.imageSources[0]" [alt]="trip.country">
+    </a>
+    <h1>{{ trip.name.toUpperCase() }}</h1>
+    <h2>{{ trip.country.toUpperCase() }}</h2>
+
+    <p class="date">{{ trip.startDate }} - {{ trip.endDate }}</p>
+    <p>{{ trip.description }}</p>    
+    <app-star-rating [trip]="trip" [readonly]="true" [horizontal]="true"></app-star-rating>
+
+    <div class="purchase-container">       
+        <div class="price">
+            <p>$ {{ trip.price }}</p>
+        </div> 
+        <p class="left">{{ ticketsLeftMessage }}</p>
+        <app-plus-minus-button [ticketsSelected]="trip.slots - ticketsLeft" [maxTickets]=trip.slots (valueChanged)="updateTickets($event)"></app-plus-minus-button>
+        <p class="selected" [class.alot]="trip.slots - ticketsLeft >= 10">{{ ticketsSelectedMessage }}</p>
+    </div>
+    
+    <button class="delete" (click)="deleteTrip()">
+        <i class="fa-regular fa-trash-can"></i>
+    </button>
+</div>

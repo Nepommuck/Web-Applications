@@ -1,0 +1,52 @@
+<div class="container" *ngIf="trip != undefined">
+    <main>        
+        <div class="left">
+            <!-- <img [src]="trip.imageSource" [alt]="trip.country"> -->
+            <ng-image-slider [images]="imageObject" [manageImageRatio]="true" [imageSize]="{width: 340, height: 340, space: 3}" #nav></ng-image-slider>
+            <h2>{{ trip.country.toUpperCase() }}</h2>
+        </div>
+
+        <div class="right">
+            <div class="trip-header">
+                <div>
+                    <app-star-rating *ngIf="!refreshNeeded" [readonly]="true" [horizontal]="true" [trip]="this.trip"></app-star-rating>
+                    <div *ngIf="refreshNeeded" style="height: 51px;"></div>
+                    <h1>{{ trip.name.toUpperCase() }}</h1>
+        
+                    <p class="date">{{ trip.startDate }} - {{ trip.endDate }}</p>
+                </div>
+                <a routerLink="/trips">
+                    <button class="delete" (click)="deleteTrip()">
+                        <i class="fa-regular fa-trash-can"></i>
+                    </button>
+                </a>
+            </div>
+            <p>{{ trip.description }}</p>    
+            
+            <div class="bottom">
+                <div class="tickets">
+                    <p class="tickets-left">{{ ticketsLeftMessage }}</p>
+                    <p class="add-to-cart">Add to cart:</p>
+                    <app-plus-minus-button [ticketsSelected]="trip.slots - ticketsLeft" [maxTickets]=trip.slots (valueChanged)="updateTickets($event)"></app-plus-minus-button>
+                    <p class="selected" [class.alot]="trip.slots - ticketsLeft >= 10">{{ ticketsSelectedMessage }}</p>
+                </div>
+                <p class="price">$ {{ trip.price }}</p>
+            </div>
+        </div>
+    </main>
+    <div class="button-holder">
+        <a routerLink="/trips">
+            <button class="go-back">Return</button>
+        </a>
+    </div>
+
+    <app-comment-section [trip]="trip" [rating]="3" (reviewAdded)="refreshRating()"></app-comment-section>
+</div>
+
+<div class="container" *ngIf="trip == undefined">
+    <h1>Trip not found!</h1>
+    <a routerLink="/trips">
+        <button class="go-back">Return</button>
+    </a>
+</div>
+<footer></footer>

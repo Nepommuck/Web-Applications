@@ -1,0 +1,113 @@
+:host {
+    --photo-size: 250px;
+}
+
+:not(i) {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+p, h1, h1 {
+    margin: 0;
+}
+
+.trip-ticket {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    padding: 15px 30px;
+    margin: 30px 50px;
+    background-color: rgb(230, 230, 230);
+    border-radius: 15px;
+    z-index: 500;
+}
+
+.list-holder {
+    display: flex;
+}
+
+ul.prices {
+    font-weight: bold;
+    list-style-type: none;
+}
+
+li {
+    margin: 10px;
+    font-size: 1.4em;
+}
+li.total {
+    list-style-type: none;
+}
+
+p {
+    font-size: 1.6em;
+}
+
+button.buy {
+    background-color: green;
+    color: white;
+    border: 0 solid white;
+    font-size: 25px;
+    border-radius: 15px;
+    padding: 7px 20px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+button.buy:hover {
+    cursor: pointer;
+    border: 5px solid green;
+    padding: 2px 15px;
+    color: green;
+    background-color: white;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+img {
+    display: block;
+    width: var(--photo-size);
+    height: var(--photo-size);
+    object-fit: cover;
+    border-radius: 30px;
+
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.archival {
+    color: red;
+}
+.ongoing {
+    color: green;
+}
+.future {
+    color: blue;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 50px;
+}
+.filters {
+    display: flex;
+}
+input[type='checkbox'] {
+    width: 25px;
+}
+label {
+    user-select: none;
+    font-size: 25px;
+    margin-left: 25px;
+}

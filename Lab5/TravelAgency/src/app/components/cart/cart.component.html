@@ -1,0 +1,20 @@
+<div class="container">
+    <p>Trips in cart: </p>
+
+    <div class="list-holder">
+        <ul class="names">
+            <li *ngFor="let record of getCart()">{{ record.quantity }}x {{ record.trip.name }}</li>
+            <br>
+            <li class="total">Total:</li>
+        </ul>
+        <ul class="prices">
+            <li *ngFor="let record of getCart()">{{"$ " + record.quantity * record.trip.price }}</li>
+            <br>
+            <li>{{ "$ " + countTotalCost() }}</li>
+        </ul>
+    </div>
+    <a routerLink="/purchase-history">
+        <button class="buy" (click)="purchase()">Purchase</button>
+    </a>
+</div>
+

@@ -1,0 +1,124 @@
+:host {
+    --photo-size: max(350px);
+}
+
+:not(i) {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1 {
+    font-size: 2.1em;
+    font-weight: lighter;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+/* Country */
+h2 {
+    font-size: calc(0.1 * var(--photo-size));
+    margin: 20px 0;
+}
+
+h2, p {
+    margin: 10px 0;
+}
+p {
+    font-size: 1.2em;
+}
+
+.container {
+    max-width: max(600px, 80vw);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main {
+    display: flex;
+    gap: 15px;
+}
+
+.left {
+    width: var(--photo-size);
+    /* height: var(--photo-size); */
+    align-items: center;
+    text-align: center;
+}
+.right {
+    width: calc(100% - var(--photo-size));
+}
+.trip-header {
+    display: flex;
+    justify-content: space-between;
+}
+.bottom {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.price {
+    text-align: right;
+    font-weight: bold;
+    font-size: 2.2em;
+}
+
+.add-to-cart {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.selected {
+    font-weight: bold;
+    min-height: 20px;
+    color: red;
+}
+.selected.alot {
+    color: green;
+}
+
+app-plus-minus-button {
+    margin-left: 10px;
+}
+
+.delete {
+    opacity: 0.2;
+    width: 55px;
+    height: 55px;
+    font-size: 35px;
+    border: 4px solid red;
+    border-radius: 8px;
+    color: red;
+    background-color: rgb(255, 241, 241);
+}
+.delete:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.go-back {
+    background-color: gray;
+    color: white;
+    border: 0 solid white;
+    font-size: 25px;
+    border-radius: 15px;
+    padding: 7px 20px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+.go-back:hover {
+    cursor: pointer;
+    border: 5px solid green;
+    padding: 2px 15px;
+    color: green;
+    background-color: white;
+}
+
+footer {
+    height: 100px;
+}
+
+.button-holder {
+    display: flex;
+    justify-content: end;
+}

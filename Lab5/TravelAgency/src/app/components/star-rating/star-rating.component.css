@@ -1,0 +1,60 @@
+div {
+    height: 30px;
+    overflow: hidden;
+    user-select: none;
+    font-size: 20px;
+}
+
+.display {
+    display: flex;
+}
+.container:hover .display {
+    display: none;
+}
+
+.insert {
+    display: none;
+    color: black;
+}
+.container:hover .insert {
+    display: flex;
+}
+
+.empty {
+    position: relative;
+}
+.full, .empty .content {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.empty .content {
+    position: absolute;
+    right: 0;
+}
+
+
+.insert .fa-regular {
+    display: none;
+}
+.insert .fa-solid:hover ~ .fa-solid {
+    display: none;
+}
+.insert .fa-solid:hover ~ .fa-regular {
+    display: block;
+}
+.insert i:hover {
+    cursor: pointer;
+}
+
+.always-display {
+    display: flex;
+}
+.hidden-insert {
+    display: none;
+}
+
+.horizontal-holder {
+    display: flex;
+    align-items: baseline;
+    column-gap: 10px;
+}
