@@ -1,0 +1,13 @@
+<div class="cart-holder">
+    <app-cart [cart]="cart"></app-cart>
+</div>
+
+<hr>
+
+<div class="form-holder" [style.display]="formOpen ? 'flex' : 'none'">
+    <app-new-trip-form (tripAdded)="addTrip($event)" (formClosed)="closeForm()"></app-new-trip-form>
+</div>
+
+<app-trips-holder [trips]="tripList" (tripRemoved)="removeTrip($event)" (cartChanged)="updateCart($event)"></app-trips-holder>
+
+<button class="add-new-trip" [style.display]="formOpen ? 'none' : 'block'" (click)="openForm()">+</button>

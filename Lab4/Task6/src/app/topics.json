@@ -1,0 +1,17 @@
+{
+    "topics": [
+        {
+            "title": "The Basics",
+            "description": "Core Angular basics you have to know",
+            "content": "Angular is a platform and framework for building single-page client applications using HTML and TypeScript. Angular is written in TypeScript. It implements core and optional functionality as a set of TypeScript libraries that you import into your applications. The architecture of an Angular application relies on certain fundamental concepts. The basic building blocks of the Angular framework are Angular components that are organized into NgModules. NgModules collect related code into functional sets; an Angular application is defined by a set of NgModules. An application always has at least a root module that enables bootstrapping, and typically has many more feature modules."
+        }, {
+            "title": "Components",
+            "description": "Component are a core concept for building Angular UIs and apps",
+            "content": "Every Angular application has at least one component, the root component that connects a component hierarchy with the page document object model (DOM). Each component defines a class that contains application data and logic, and is associated with an HTML template that defines a view to be displayed in a target environment. The @Component() decorator identifies the class immediately below it as a component, and provides the template and related component-specific metadata."
+        }, {
+            "title": "Events",
+            "description": "Events are important in Angular",
+            "content": "To bind to an event you use the Angular event binding syntax. This syntax consists of a target event name within parentheses to the left of an equal sign, and a quoted template statement to the right. Create the following example; the target event name is click and the template statement is onSave(). Event binding syntax: <button (click)=\"onSave()\">Save</button> The event binding listens for the button's click events and calls the component's onSave() method whenever a click occurs."
+        }
+    ]
+}
