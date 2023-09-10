@@ -14,7 +14,9 @@ const routes: Routes = [
   {path: 'new-trip', component: NewTripFormComponent},
   {path: 'cart', component: CartComponent},
   {path: 'purchase-history', component: PurchaseHistoryComponent},
-  {path: 'trip/:id', component: SingleTripPageComponent}
+  {path: 'trip/:id', component: SingleTripPageComponent},
+  // For 404 route to the home page
+  {path: '**', component: HomeComponent},
 ];
 
 @NgModule({
