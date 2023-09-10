@@ -10,9 +10,9 @@
             "slots": 11,
             "description": "Nice.",
             "imageSources": [
-                "../../assets/images/trip-images/provance.jpg",
-                "../../assets/images/trip-images/provance2.jpg",
-                "../../assets/images/trip-images/provance3.jpg"
+                "assets/images/trip-images/provance.jpg",
+                "assets/images/trip-images/provance2.jpg",
+                "assets/images/trip-images/provance3.jpg"
             ],
             "ratings": {"summary": 4, "numberOfRatings": 1},
             "reviews": []
@@ -25,7 +25,7 @@
             "price": 1299,
             "slots": 20,
             "description": "OK.",
-            "imageSources": ["../../assets/images/trip-images/spanish-coast.jpg"],
+            "imageSources": ["assets/images/trip-images/spanish-coast.jpg"],
             "ratings": {"summary": 0, "numberOfRatings": 0},
             "reviews": []
         }, {
@@ -37,7 +37,7 @@
             "price": 690,
             "slots": 130,
             "description": "Allow your kid to see the world",
-            "imageSources": ["../../assets/images/trip-images/bulgaria.jpg"],
+            "imageSources": ["assets/images/trip-images/bulgaria.jpg"],
             "ratings": {"summary": 12, "numberOfRatings": 8},
             "reviews": [
                 {"author": "matka_na_pelen_etat_11", "rating": 1, "comment": "Nie polecam !wyslalam syna i wrucił z 0 ,5 promila alkoholu w krwi .ma 12 lat"},
@@ -52,7 +52,7 @@
             "price": 104.71,
             "slots": 0,
             "description": "Where the West meets the East",
-            "imageSources": ["../../assets/images/trip-images/yugoslavia.jpg"],
+            "imageSources": ["assets/images/trip-images/yugoslavia.jpg"],
             "ratings": {"summary": 460, "numberOfRatings": 100},
             "reviews": []
         }, {
@@ -64,7 +64,7 @@
             "price": 980,
             "slots": 8,
             "description": "Heart of Renaissance",            
-            "imageSources": ["../../assets/images/trip-images/renissance.jpg"],
+            "imageSources": ["assets/images/trip-images/renissance.jpg"],
             "ratings": {"summary": 4, "numberOfRatings": 2},
             "reviews": []
         }, {
@@ -76,7 +76,7 @@
             "price": 1380,
             "slots": 2,
             "description": "Among the piramids",
-            "imageSources": ["../../assets/images/trip-images/pyramids.jpg"],
+            "imageSources": ["assets/images/trip-images/pyramids.jpg"],
             "ratings": {"summary": 10, "numberOfRatings": 6},
             "reviews": []
         }, {
@@ -88,7 +88,7 @@
             "price": 730,
             "slots": 17,
             "description": "Las Vegas of Silesia",
-            "imageSources": ["../../assets/images/trip-images/zabrze.jpg"],
+            "imageSources": ["assets/images/trip-images/zabrze.jpg"],
             "ratings": {"summary": 5, "numberOfRatings": 1},
             "reviews": [
                 {"author": "ZabrzaninWielki", "rating": 5, "comment": "Zabrze perłą Europy Środkowej"}
@@ -102,7 +102,7 @@
             "price": 1390,
             "slots": 3,
             "description": "Help colonising the desert",
-            "imageSources": ["../../assets/images/trip-images/israel.jpg"],
+            "imageSources": ["assets/images/trip-images/israel.jpg"],
             "ratings": {"summary": 12, "numberOfRatings": 8},
             "reviews": []
         }, {
@@ -114,7 +114,7 @@
             "price": 1980,
             "slots": 8,
             "description": "Quite green, not so icy...",
-            "imageSources": ["../../assets/images/trip-images/iceland.jpg"],
+            "imageSources": ["assets/images/trip-images/iceland.jpg"],
             "ratings": {"summary": 19, "numberOfRatings": 4},
             "reviews": []
         }, {
@@ -126,7 +126,7 @@
             "price": 1920,
             "slots": 6,
             "description": "Quite icy, can't see the green...",
-            "imageSources": ["../../assets/images/trip-images/greenland.jpg"],
+            "imageSources": ["assets/images/trip-images/greenland.jpg"],
             "ratings": {"summary": 11, "numberOfRatings": 3},
             "reviews": []
         }
