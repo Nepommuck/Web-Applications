@@ -16,7 +16,6 @@ import { SingleTripPageComponent } from './components/single-trip-page/single-tr
 import { CommentSectionComponent } from './components/comment-section/comment-section.component';
 import { FormsModule } from '@angular/forms';
 import { PurchaseHistoryComponent } from './components/purchase-history/purchase-history.component';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -39,9 +38,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     NgImageSliderModule
   ],
   providers: [
-    CurrentTripsService,
-    // For hosting on github pages
-    {provide: LocationStrategy, useClass: HashLocationStrategy},
+    CurrentTripsService
   ],
   bootstrap: [AppComponent]
 })
